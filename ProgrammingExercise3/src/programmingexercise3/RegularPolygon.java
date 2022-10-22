@@ -70,7 +70,7 @@ public class RegularPolygon {
     
     public double getArea(){
         double area;
-        area = (this.n * Math.pow(this.side, 2) / 4 * Math.tan(Math.PI/this.n));
+        area = (this.n * Math.pow(this.side, 2) / 4 * Math.tan((getPerimeter()/this.n)));
         return area;
     }
     
