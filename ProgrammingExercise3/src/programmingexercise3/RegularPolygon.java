@@ -13,11 +13,6 @@ public class RegularPolygon {
         this.y = 0;
     }
     
-    /**
-     *
-     * @param n
-     * @param side
-     */
     public RegularPolygon(int n, double side){
         this.n = n;
         this.side = side;
@@ -33,19 +28,19 @@ public class RegularPolygon {
     }
 
     public int getN() {
-        return n;
+        return this.n;
     }
 
     public double getSide() {
-        return side;
+        return this.side;
     }
 
     public double getX() {
-        return x;
+        return this.x;
     }
 
     public double getY() {
-        return y;
+        return this.y;
     }
 
     public void setN(int n) {
@@ -69,8 +64,10 @@ public class RegularPolygon {
     }
     
     public double getArea(){
-        double area;
-        area = (this.n * Math.pow(this.side, 2) / 4 * Math.tan((getPerimeter()/this.n)));
+       
+
+        double area = (this.n * Math.pow(this.side, 2)) / (4 * Math.tan(Math.toRadians(Math.PI/this.n)));
+       
         return area;
     }
     

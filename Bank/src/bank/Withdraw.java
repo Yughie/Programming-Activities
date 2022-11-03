@@ -18,7 +18,7 @@ public class Withdraw extends ATM{
     
     @Override
     public String toString(){
-         return super.toString() + "New Balance: " + (super.getBalance());
+         return super.toString() + "New Balance: " + super.getBalance();
     }
     
     
