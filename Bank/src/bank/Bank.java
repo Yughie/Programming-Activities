@@ -24,20 +24,8 @@ public class Bank {
         atm1.inputPIN();
         atm1.chooseMode();
         
-       
-        System.out.println("Amount: ");
-        double amount = sc.nextDouble();
         
-        if(atm1.getChoice() == 1) {
-            Deposit deposit1 = new Deposit();
-            deposit1.setAmount(amount);
-            System.out.println(deposit1.toString());
-        }
-        else{
-            Withdraw withdraw1 = new Withdraw();
-            withdraw1.setAmount(amount);
-            System.out.println(withdraw1.toString());
-        }
+        
     }
     
 }

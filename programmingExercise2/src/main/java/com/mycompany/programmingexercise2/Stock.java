@@ -6,8 +6,18 @@ public class Stock {
     double currentPrice;
 
     public Stock() {
-        symbol = "Perez";
-        name = "Yughie"; 
+        symbol = "Facebook";
+        name = "Meta"; 
+        this.previousClosingPrice = 0;
+        this.currentPrice = 0;
+        
+    }
+    
+    public Stock(String symbol, String name) {
+        this.symbol = symbol;
+        this.name = name;
+        this.previousClosingPrice = 0;
+        this.currentPrice = 0;
     }
 
     public Stock(String symbol, String name, double previousClosingPrice, double currentPrice) {

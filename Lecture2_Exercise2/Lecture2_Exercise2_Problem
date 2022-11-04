@@ -1,0 +1,94 @@
+Programming Exercise #2
+
+Design a class named Person and its two subclasses named Student and Employee.
+Make Faculty and Staff subclasses of Employee. A person has a name, address, phone number, and email address. 
+A student has a class status (freshman, sophomore, junior, or senior). Define the status as a constant. 
+An employee has an office number and salary. A faculty member has office hours and a rank. A staff member has a title. 
+Override the toString method in each class to display the class name and the person’s name.
+
+
+(The Person class) Design a class named Person. The class contains:
+
+
+ A string data field named name with a default value of “unknown” 
+ A string data field named address with a default value of “unknown” 
+ A string data field named phone with a default value of “unknown” 
+ A string data field named email with a default value of “unknown” 
+ A no-arg constructor that creates the Person class with the default values 
+ A constructor that creates the Person class with the specified name, address, phone and email 
+ A getter and setter for all data fields
+ A method named toString() that returns a string description
+
+The toString() method is implemented as follows: 
+return "\nName: " + name + "\nAddress: " + address + "\nPhone number: " + phone + "\nEmail address:" + email;
+
+
+
+
+(The Employee class) Design a class named Employee that extends Person class. The class contains:
+
+ An integer data field named officeNo 
+ A double data field named salary 
+ A constructor that creates an Employee class with the specified name, address, phone, email, officeNo, and salary
+ A getter and setter for all data fields
+ A method named toString() that returns a string description
+
+The toString() method is implemented as follows: 
+return super.toString() + "\nOffice No: " + officeNo + "\nSalary: $" + getSalary();
+
+
+
+
+(The Student class) Design a class named Student that extends to Person class. The class contains:
+
+ An integer data field named status 
+ An integer data field named FRESHMAN with access specifier public final static with an assigned value of 1
+ An integer data field named SOPHOMORE with access specifier public final static 
+ An integer data field named JUNIOR with access specifier public final static 
+ An integer data field named SENIOR with access specifier public final static 
+ A constructor that create a Student class with a specified parameter name, address, phone, email and status
+ A getter and setter for status data field 
+ A method named toString() that returns the description of the class
+
+The toString() method is implemented as follows: 
+return super.toString() + "\nStatus: " + getStatus();
+
+
+
+
+
+
+(The Faculty class) Design a class named Faculty that extends to Employee class. The class contains:
+
+ A string data field named officeHours 
+ A string data field named rank 
+ A constructor that creates a Faculty class with a specified parameter name, address, phone, email, officeNo, salary, officeHours and rank
+ A getter and setter for all data field 
+ A method named toString() that returns the description of the class
+
+The toString() method is implemented as follows:
+return super.toString() + "\nOffice hours: " + officeHours + "\nRank: " + rank;
+
+
+
+
+
+
+(The Staff class) Design a class named Staff that extends to Employee class. The class contains: 
+
+ A string data field named title 
+ A constructor that creates a Staff class with a specified parameter name, address, phone, email, officeNo, salary, and title
+ A getter and setter for all data field 
+ A method named toString() that returns the description of the class
+
+The toString() method is implemented as follows: 
+return super.toString() + "\nTitle: " + title;
+
+
+
+
+Write a test program that creates a Person, Student, Employee, Faculty, and Staff, and invokes their
+toString() methods
+
+
+

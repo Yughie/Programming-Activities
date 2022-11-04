@@ -27,7 +27,7 @@ public class Rectangle {
     
     public double getPerimeter(){
         
-        perimeter = (this.width + this.height) * 2;
+        perimeter = 2 * (this.width + this.height) ;
         return perimeter;
     }
     

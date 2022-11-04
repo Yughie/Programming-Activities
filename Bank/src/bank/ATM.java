@@ -81,10 +81,16 @@ class ATM {
         } while(this.choice < 1 && this.choice > 2);
         
         if(this.choice == 1){
-            
+            Deposit deposit1 = new Deposit();
+            deposit1.setAmount();
+            this.balance -= deposit1.getAmount();
+            deposit1.toString();
         }
         else{
-            
+            Withdraw withdraw1 = new Withdraw();
+            withdraw1.setAmount();
+            this.balance -= withdraw1.getAmount();
+            withdraw1.toString();
         }
     }
     

@@ -4,6 +4,8 @@
  */
 package bank;
 
+import java.util.Scanner;
+
 /**
  *
  * @author YUGHIE
@@ -11,14 +13,22 @@ package bank;
 public class Deposit extends ATM{
       private double amount;
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void setAmount() {
+        System.out.println("Set Ammount to Deposit: ");
+        Scanner sc = new Scanner(System.in);
+        this.amount = sc.nextDouble();   
     }
+
+    public double getAmount() {
+        return amount;
+    }
+    
+    
     
     @Override
     public String toString(){
          
-         return super.toString() + "New Balance: " + (super.getBalance() + this.amount);
+         return super.toString() + "New Balance: " + super.getBalance();
     }
     
 }

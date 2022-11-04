@@ -17,14 +17,6 @@ public class ProgrammingExercise1 {
         Rectangle rectangle3 = new Rectangle(3.5,35.9);
         
         
-        System.out.println("Rectangle1 area: " + rectangle1.getArea());
-        System.out.println("Rectangle1 perimeter: " + rectangle1.getPerimeter());
-        
-        System.out.println("Rectangle2 area: " + rectangle2.getArea());
-        System.out.println("Rectangle2 perimeter: " + rectangle2.getPerimeter());
-        
-        System.out.println("Rectangle2 area: " + rectangle2.getArea());
-        System.out.println("Rectangle2 perimeter: " + rectangle2.getPerimeter());
         
         rectangle1.displayInformation();
         rectangle2.displayInformation();
