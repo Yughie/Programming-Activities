@@ -30,5 +30,4 @@ public class Faculty extends Employee{
     public String toString(){
     return super.toString() + "\nOffice hours: " + officeHours + "\nRank: " + rank;
     }
-    
 }

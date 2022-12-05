@@ -19,7 +19,8 @@ public class Person {
         this.phone = phone;
         this.email = email;
     }
-
+    
+    //GETTER & SETTER
     public String getName() {
         return name;
     }
@@ -31,7 +32,7 @@ public class Person {
     public String getAddress() {
         return address;
     }
-
+    
     public void setAddress(String address) {
         this.address = address;
     }

@@ -13,13 +13,13 @@ public class ProgrammingExercise3 {
         System.out.println(polygon1.getPerimeter());
         System.out.println(polygon1.getArea());
         
+        System.out.println();
         System.out.println(polygon2.getPerimeter());
         System.out.println(polygon2.getArea());
         
+        System.out.println();
         System.out.println(polygon3.getPerimeter());
         System.out.println(polygon3.getArea());
-        
 
     }
-    
 }

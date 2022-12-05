@@ -17,7 +17,8 @@ public class Triangle extends GeometricObject{
         this.side2 = side2;
         this.side3 = side3;
     }
-
+    
+    //GETTER
     public double getSide1() {
         return side1;
     }

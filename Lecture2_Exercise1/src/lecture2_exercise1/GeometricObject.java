@@ -13,17 +13,19 @@ public class GeometricObject {
         this.color = color;
         this.filled = filled;
     }
-
+    
+    //GETTER
     public String getColor() {
         return color;
     }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
+    
     public boolean isFilled() {
         return filled;
+    }
+
+    //SETTER
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public void setFilled(boolean filled) {
@@ -32,7 +34,5 @@ public class GeometricObject {
     
     public String toString(){
         return "Color: " + color + " and filled: " + filled;
-    }
-    
-    
+    } 
 }

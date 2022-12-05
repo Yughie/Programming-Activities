@@ -64,13 +64,7 @@ public class RegularPolygon {
     }
     
     public double getArea(){
-       
-
         double area = (this.n * Math.pow(this.side, 2)) / (4 * Math.tan(Math.toRadians(Math.PI/this.n)));
-       
         return area;
     }
-    
-    
-    
 }

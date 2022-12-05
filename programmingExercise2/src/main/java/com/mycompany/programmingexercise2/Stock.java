@@ -20,6 +20,12 @@ public class Stock {
         this.currentPrice = 0;
     }
 
+    public Stock(String symbol, String name, double previousClosingPrice) {
+        this.symbol = symbol;
+        this.name = name;
+        this.previousClosingPrice = previousClosingPrice;
+        this.currentPrice = 0;
+    }
     public Stock(String symbol, String name, double previousClosingPrice, double currentPrice) {
         this.symbol = symbol;
         this.name = name;
@@ -60,12 +66,12 @@ public class Stock {
     }
     
     public double getChangePercent(){
-        double changePercent = ((this.currentPrice - this.previousClosingPrice) / this.previousClosingPrice) * 100;
+        double changePercent = (((this.currentPrice - this.previousClosingPrice) / this.previousClosingPrice)) * 100;
         return changePercent;  
     }
     
     public void displayInformation(){
-        System.out.println("------------------------------------");
+        System.out.println("-------------------------------------------------------");
         System.out.println("Symbol: " + this.symbol);
         System.out.println("Name: " + this.name);
         System.out.println("Previous Closing Price: " + this.previousClosingPrice);
