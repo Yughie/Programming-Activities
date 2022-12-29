@@ -11,9 +11,9 @@ public class Loan {
     
     
     Loan() {
-        annualInterestRate = 4.25;
-        numberOfYears = 6;
-        loanAmount = 200000;
+        annualInterestRate = 2.5;
+        numberOfYears = 1;
+        loanAmount = 1000;
     }
     
     Loan(double annualInterestRate, int numberOfYears, double loanAmount) {

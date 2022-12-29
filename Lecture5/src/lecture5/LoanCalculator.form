@@ -23,112 +23,65 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="57" green="2e" red="2e" type="rgb"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
-                          <Component id="btnComputeLoan" min="-2" pref="155" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="lblDate" alignment="1" max="32767" attributes="0"/>
+                      <Component id="lblTotalPayment" alignment="1" max="32767" attributes="0"/>
+                      <Component id="lblMonthlyPayment" alignment="1" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtInterestRate" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="txtNumberOfYears" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="txtLoanAmount" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
+                                  <Component id="btnComputeLoan" min="-2" pref="155" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblMonthlyPayment" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblDate" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblTotalPayment" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="0" pref="221" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="215" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="txtInterestRate" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="txtNumberOfYears" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="txtLoanAmount" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                   <Component id="btnComputeLoan" min="-2" pref="53" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="lblDate" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="lblDate" min="-2" pref="21" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblMonthlyPayment" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblMonthlyPayment" min="-2" pref="23" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblTotalPayment" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="59" max="32767" attributes="0"/>
+                  <Component id="lblTotalPayment" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace pref="125" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Enter yearly interest rate (i.e 8.25)"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Enter number of years as an interger"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Enter loan amount (i.e 120000.95)"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtInterestRate">
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtNumberOfYears">
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtLoanAmount">
-        </Component>
         <Component class="javax.swing.JButton" name="btnComputeLoan">
           <Properties>
             <Property name="text" type="java.lang.String" value="Compute my Loan"/>
@@ -139,19 +92,116 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblDate">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel4"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblMonthlyPayment">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel5"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblTotalPayment">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel6"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
           </Properties>
         </Component>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="47" green="16" red="1c" type="rgb"/>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtLoanAmount" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="txtInterestRate" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="txtNumberOfYears" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="68" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="txtInterestRate" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtNumberOfYears" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtLoanAmount" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="126" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="d1" green="c4" red="c2" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Enter yearly interest rate (i.e 8.25)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtInterestRate">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="d1" green="c4" red="c2" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Enter number of years as an interger"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNumberOfYears">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="d1" green="c4" red="c2" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Enter loan amount (i.e 120000.95)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtLoanAmount">
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

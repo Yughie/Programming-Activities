@@ -12,6 +12,9 @@ public class LoanCalculator extends javax.swing.JFrame {
      */
     public LoanCalculator() {
         initComponents();
+        this.setTitle("Loan Calculator");
+        
+        
     }
 
     /**
@@ -24,24 +27,22 @@ public class LoanCalculator extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        txtInterestRate = new javax.swing.JTextField();
-        txtNumberOfYears = new javax.swing.JTextField();
-        txtLoanAmount = new javax.swing.JTextField();
         btnComputeLoan = new javax.swing.JButton();
         lblDate = new javax.swing.JLabel();
         lblMonthlyPayment = new javax.swing.JLabel();
         lblTotalPayment = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        txtInterestRate = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtNumberOfYears = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtLoanAmount = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Enter yearly interest rate (i.e 8.25)");
-
-        jLabel2.setText("Enter number of years as an interger");
-
-        jLabel3.setText("Enter loan amount (i.e 120000.95)");
+        jPanel1.setBackground(new java.awt.Color(46, 46, 87));
+        jPanel1.setName(""); // NOI18N
 
         btnComputeLoan.setText("Compute my Loan");
         btnComputeLoan.addActionListener(new java.awt.event.ActionListener() {
@@ -50,45 +51,48 @@ public class LoanCalculator extends javax.swing.JFrame {
             }
         });
 
-        lblDate.setText("jLabel4");
+        lblDate.setForeground(new java.awt.Color(255, 255, 255));
 
-        lblMonthlyPayment.setText("jLabel5");
+        lblMonthlyPayment.setForeground(new java.awt.Color(255, 255, 255));
 
-        lblTotalPayment.setText("jLabel6");
+        lblTotalPayment.setForeground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(214, 214, 214)
-                        .addComponent(btnComputeLoan, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtInterestRate, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNumberOfYears, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblMonthlyPayment)
-                            .addComponent(lblDate)
-                            .addComponent(lblTotalPayment))))
-                .addContainerGap(215, Short.MAX_VALUE))
+        jPanel2.setBackground(new java.awt.Color(28, 22, 71));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(194, 196, 209));
+        jLabel1.setText("Enter yearly interest rate (i.e 8.25)");
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(194, 196, 209));
+        jLabel2.setText("Enter number of years as an interger");
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(194, 196, 209));
+        jLabel3.setText("Enter loan amount (i.e 120000.95)");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtInterestRate, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNumberOfYears, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtInterestRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -100,37 +104,59 @@ public class LoanCalculator extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104)
+                .addContainerGap(126, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblTotalPayment, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblMonthlyPayment, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(214, 214, 214)
+                                .addComponent(btnComputeLoan, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 221, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnComputeLoan, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblDate)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblDate, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblMonthlyPayment)
+                .addComponent(lblMonthlyPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblTotalPayment)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addComponent(lblTotalPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    double interestRate ;
-    int numberOfYears;
-    double loanAmount;
+    double interestRate = 0;
+    int numberOfYears = 0;
+    double loanAmount = 0;
+    
 
     
     public void displayInformation(Loan loan){         
@@ -140,20 +166,115 @@ public class LoanCalculator extends javax.swing.JFrame {
            lblMonthlyPayment.setText("The monthly payment is " + frm.format(loan.getMonthlyPayment()));
            lblTotalPayment.setText("The total payment is " + frm.format(loan.getTotalPayment()));
        }
-    public void setDataField(){
-        
-            
+    
+    public void clearFields(){
+        txtInterestRate.setText("");
+        txtNumberOfYears.setText("");
+        txtLoanAmount.setText("");
+        lblDate.setText("");
+        lblMonthlyPayment.setText("");
+        lblTotalPayment.setText("");
+        interestRate = 0;
+        numberOfYears = 0;
+        loanAmount = 0;
     }
+
     
     private void btnComputeLoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComputeLoanActionPerformed
+          
+        try{
+            interestRate = Double.parseDouble(txtInterestRate.getText());
+            numberOfYears = Integer.parseInt(txtNumberOfYears.getText());
+            loanAmount = Double.parseDouble(txtLoanAmount.getText()); 
+            
+            
+                
+            
+        }
+        catch(NumberFormatException e){
+            if(e.getMessage().matches("empty String")){
+                Loan loan = new Loan();
+                
+                //INTEREST RATE IS EMPTY
+                if(txtInterestRate.getText().isEmpty()){
+                    
+
+                    int option = JOptionPane.showConfirmDialog(this, "Interest Rate is Empty. Do you want to set it to default?", "Notice", JOptionPane.YES_NO_CANCEL_OPTION);
+
+                    if(option == 0){         
+                        interestRate = loan.getAnnualInterestRate();
+                        txtInterestRate.setText(String.valueOf(interestRate));
+                    }
+                    else if(option == 1){
+                        clearFields();
+                    } 
+
+                }
+                //NUMBER OF YEARS IS EMPTY
+                if(txtNumberOfYears.getText().isEmpty()){
+                    
+                    int option = JOptionPane.showConfirmDialog(this, "Interest Rate is Empty. Do you want to set it to default?", "Notice", JOptionPane.YES_NO_CANCEL_OPTION);
+
+                    if(option == 0){         
+                        numberOfYears = loan.getNumberOfYears();
+                        txtNumberOfYears.setText(String.valueOf(numberOfYears));
+                    }
+                    else if(option == 1){
+                        clearFields();
+                    } 
+
+                }
+                //LOAN AMOUNT IS EMPTY
+                if(txtLoanAmount.getText().isEmpty()){               
+
+                   int option = JOptionPane.showConfirmDialog(this, "Loan Amount is Empty. Do you want to set it to default?", "Notice", JOptionPane.YES_NO_CANCEL_OPTION);
+
+                    if(option == 0){         
+                        loanAmount = loan.getLoanAmount();
+                        txtLoanAmount.setText(String.valueOf(loanAmount));
+                    }
+                    else if(option == 1){
+                        clearFields();
+                    } 
+                }   
+            }
+            else{
+                int option = JOptionPane.showConfirmDialog(this, "Invalid Format. Do you want to set all to default?", "Notice", JOptionPane.YES_NO_CANCEL_OPTION);
+                
+                if(option == 0){         
+                    Loan loan = new Loan();
+                    interestRate = loan.getAnnualInterestRate();
+                    numberOfYears = loan.getNumberOfYears();
+                    loanAmount = loan.getLoanAmount();
+                    txtInterestRate.setText(String.valueOf(interestRate));
+                    txtNumberOfYears.setText(String.valueOf(numberOfYears));
+                    txtLoanAmount.setText(String.valueOf(loanAmount));
+                       
+                }
+                else if(option == 1){
+                    clearFields();
+                }  
+               
+            }
+        }
+        catch(Exception e){
+            int option = JOptionPane.showConfirmDialog(this, "ERROR 101", "ERROR", JOptionPane.YES_NO_OPTION);
+            
+           if (option == 0){
+               System.exit(0);
+           }
+        }
+        Loan loan1 = new Loan(interestRate, numberOfYears, loanAmount);
+        displayInformation(loan1);
         
-        if(txtInterestRate.getText().isEmpty() || txtLoanAmount.getText().isEmpty()|| txtNumberOfYears.getText().isEmpty()) {
+        
+        /*if(txtInterestRate.getText().isEmpty() || txtLoanAmount.getText().isEmpty()|| txtNumberOfYears.getText().isEmpty()) {
             try {
                 interestRate = Double.parseDouble(txtInterestRate.getText());
                 numberOfYears = Integer.parseInt(txtLoanAmount.getText());
                 loanAmount = Double.parseDouble(txtNumberOfYears.getText());
             } catch (Exception e) {
-                int option = JOptionPane.showConfirmDialog(this, "Invaid input. Do you want to set all to default?", "Notice", JOptionPane.YES_NO_CANCEL_OPTION);
+                int option = JOptionPane.showConfirmDialog(this, "1Invaid input. Do you want to set all to default?", "Notice", JOptionPane.YES_NO_CANCEL_OPTION);
                 if(option == 0){
                     Loan loan = new Loan();
                     displayInformation(loan);
@@ -177,7 +298,7 @@ public class LoanCalculator extends javax.swing.JFrame {
                 numberOfYears = Integer.parseInt(txtNumberOfYears.getText());
                 loanAmount = Double.parseDouble(txtLoanAmount.getText());
             } catch (Exception e) {
-                int option = JOptionPane.showConfirmDialog(this, "Invaid input. Do you want to set all to default?", "Notice", JOptionPane.YES_NO_CANCEL_OPTION);
+                int option = JOptionPane.showConfirmDialog(this, "2Invaid input. Do you want to set all to default?", "Notice", JOptionPane.YES_NO_CANCEL_OPTION);
                 if(option == 0){
                     Loan loan = new Loan();
                     displayInformation(loan);
@@ -199,10 +320,8 @@ public class LoanCalculator extends javax.swing.JFrame {
             
             Loan loan = new Loan(interestRate, numberOfYears, loanAmount);
             displayInformation(loan);
-            /*lblDate.setText(String.valueOf(loan.getAnnualInterestRate()));
-            lblMonthlyPayment.setText(String.valueOf(loan.getNumberOfYears()));
-            lblTotalPayment.setText(String.valueOf(loan.getLoanAmount()));*/
-        }
+           
+        } */
        
     }//GEN-LAST:event_btnComputeLoanActionPerformed
 
@@ -247,6 +366,7 @@ public class LoanCalculator extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblDate;
     private javax.swing.JLabel lblMonthlyPayment;
     private javax.swing.JLabel lblTotalPayment;
