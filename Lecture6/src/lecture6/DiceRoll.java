@@ -41,6 +41,8 @@ public class DiceRoll extends JFrame {
         btnRoll = new javax.swing.JButton();
         lblIcon1 = new javax.swing.JLabel();
         lblScore = new javax.swing.JLabel();
+        lblRolling1 = new javax.swing.JLabel();
+        lblRolling2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,16 +61,14 @@ public class DiceRoll extends JFrame {
         lblScore.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblScore.setText("SCORE: 0");
 
+        lblRolling1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+
+        lblRolling2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(lblIcon1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -78,6 +78,16 @@ public class DiceRoll extends JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(lblScore)
                         .addGap(210, 210, 210))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblIcon1, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                    .addComponent(lblRolling1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblIcon2, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                    .addComponent(lblRolling2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,7 +96,11 @@ public class DiceRoll extends JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblIcon1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblRolling2, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(lblRolling1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(lblScore)
                 .addGap(18, 18, 18)
                 .addComponent(btnRoll, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -112,6 +126,14 @@ public class DiceRoll extends JFrame {
             "D:\\Documents\\Java Programming\\Programming-Activities\\Lecture6\\src\\lecture6\\image\\6.JPG"
         };
         
+        String[] rolling = {
+            "Rolling.",
+            "Rolling..",
+            "Rolling...",
+            "Rolling.",
+            "Rolling..",
+            "Rolling...",
+        };
                   
         Thread thread = new Thread(){
 
@@ -120,17 +142,23 @@ public class DiceRoll extends JFrame {
                 lblIcon1.setBorder(null);
                 lblIcon2.setBorder(null);
                 
-                for (int i = 0; i < 5; i++) {
+                
+                for (int i = 0; i <= 5; i++) {
                     
                     try {   
                         
                         lblIcon1.setIcon(new ImageIcon(icons[i]));
                         lblIcon2.setIcon(new ImageIcon(icons[i]));
+                        lblRolling1.setText(rolling[i]);
+                        lblRolling2.setText(rolling[i]);
                         Thread.sleep(100);
                         
                     } catch (InterruptedException ex) {
                     }
                 }
+                lblRolling1.setText("");
+                lblRolling2.setText("");
+                
                 random1 = rand.nextInt(icons.length);
                 random2 = rand.nextInt(icons.length);
                 
@@ -195,6 +223,8 @@ public class DiceRoll extends JFrame {
     private javax.swing.JButton btnRoll;
     private javax.swing.JLabel lblIcon1;
     private javax.swing.JLabel lblIcon2;
+    private javax.swing.JLabel lblRolling1;
+    private javax.swing.JLabel lblRolling2;
     private javax.swing.JLabel lblScore;
     // End of variables declaration//GEN-END:variables
 }
