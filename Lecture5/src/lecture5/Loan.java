@@ -1,6 +1,5 @@
 package lecture5;
 
-import java.time.Instant;
 import java.util.Date;
 
 public class Loan {

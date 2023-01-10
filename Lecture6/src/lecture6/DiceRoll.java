@@ -7,10 +7,13 @@ package lecture6;
 import java.awt.Color;
 import java.awt.Image;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.border.EtchedBorder;
+import javax.swing.border.LineBorder;
 
 /**
  *
@@ -93,9 +96,11 @@ public class DiceRoll extends JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     int score = 0;
+    int random1, random2;
     
     private void btnRollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRollActionPerformed
         // TODO add your handling code here:
+        
         Random rand = new Random();
             
         String[] icons = {
@@ -107,28 +112,48 @@ public class DiceRoll extends JFrame {
             "D:\\Documents\\Java Programming\\Programming-Activities\\Lecture6\\src\\lecture6\\image\\6.JPG"
         };
         
-        int random1 = rand.nextInt(icons.length);
-        int random2 = rand.nextInt(icons.length);
-        
-        lblIcon1.setIcon(new ImageIcon(icons[random1]));
-        lblIcon2.setIcon(new ImageIcon(icons[random2]));
-        
-        if(random1 == random2){
-            score++;
-            lblIcon1.setBorder(BorderFactory.createEmptyBorder(100, 10, 10, 10));
-            lblIcon2.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-            lblIcon1.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED, Color.GREEN, Color.BLACK));
-            lblIcon2.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED, Color.GREEN, Color.BLACK));
-            
-            
-        }
-        else{
-            lblIcon1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-            lblIcon2.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-            lblIcon1.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED, Color.RED, Color.BLACK));
-            lblIcon2.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED, Color.RED, Color.BLACK));
-        }
-        lblScore.setText("Score: " + score);
+                  
+        Thread thread = new Thread(){
+
+            @Override
+            public void run() {
+                lblIcon1.setBorder(null);
+                lblIcon2.setBorder(null);
+                
+                for (int i = 0; i < 5; i++) {
+                    
+                    try {   
+                        
+                        lblIcon1.setIcon(new ImageIcon(icons[i]));
+                        lblIcon2.setIcon(new ImageIcon(icons[i]));
+                        Thread.sleep(100);
+                        
+                    } catch (InterruptedException ex) {
+                    }
+                }
+                random1 = rand.nextInt(icons.length);
+                random2 = rand.nextInt(icons.length);
+                
+                lblIcon1.setIcon(new ImageIcon(icons[random1]));
+                lblIcon2.setIcon(new ImageIcon(icons[random2]));
+                
+                LineBorder rightBorder = new LineBorder(Color.GREEN, 10);
+                LineBorder wrongBorder = new LineBorder(Color.RED, 10);
+                
+                if(random1 == random2){
+                    score++;
+                    lblIcon1.setBorder(rightBorder);
+                    lblIcon2.setBorder(rightBorder);
+                }
+                else{
+                    lblIcon1.setBorder(wrongBorder);
+                    lblIcon2.setBorder(wrongBorder);
+                }
+                lblScore.setText("Score: " + score);
+
+            }
+        };
+        thread.start();        
     }//GEN-LAST:event_btnRollActionPerformed
 
     /**

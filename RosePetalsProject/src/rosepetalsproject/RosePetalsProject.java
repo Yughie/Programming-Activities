@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package lecture4;
+package rosepetalsproject;
 
 /**
  *
  * @author YUGHIE
  */
-public class Lecture4 {
+public class RosePetalsProject {
 
     /**
      * @param args the command line arguments
